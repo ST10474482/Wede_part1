@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character Encoding -->
+  <meta charset="UTF-8" />
+  <!-- Responsive Design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Page Description for SEO -->
+  <meta name="description"
+    content="Read what our customers have to say about Belem Bakery. Discover why people love our fresh breads, cakes, and pastries.">
+  <meta name="author" content="Neo Legodi" />
+  <meta name="keywords" content="Bakery reviews, testimonials, customer feedback, Belem Bakery" />
+
+  <!-- Page Title -->
+  <title>Reviews | Belem Bakery</title>
+
+  <!-- Structured Data (JSON-LD) for Customer Reviews -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ReviewPage",
+  "name": "Customer Reviews | Belem Bakery",
+  "description": "Read verified customer reviews for Belem Bakery’s pastries, breads, and cakes in Johannesburg.",
+  "url": "https://www.belembakery.com/reviews.html",
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Maria F." },
+      "reviewBody": "Absolutely delicious pastries! The pastéis de nata are just like in Lisbon!",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Thabo M." },
+      "reviewBody": "Always fresh baked goods and excellent customer service.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ricardo L." },
+      "reviewBody": "I ordered catering for a family event – everything was fresh, on time, and beautifully presented.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ana P." },
+      "reviewBody": "Belem Bakery brings back memories of my early years spent in Portugal. So real and cozy.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Belem Bakery",
+    "url": "https://www.belembakery.com"
+  }
+}
+</script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- =========================
+       Navigation / Header
+       ========================= -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <!-- Logo -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="cta">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Shopping Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount"></span>
+      </a>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Testimonials Section
+       ========================= -->
+  <section class="testimonials" data-aos="fade-up">
+    <h1>Customer Reviews</h1>
+
+    <!-- Grid of Testimonial Cards -->
+    <div class="testimonial-grid">
+      <!-- Individual Testimonial Card -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <p>"Absolutely delicious pastries! The pastéis de nata are just like in Lisbon!"</p>
+        <h4>– Maria F.</h4>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <p>"Always fresh baked goods and excellent customer service."</p>
+        <h4>– Thabo M.</h4>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <p>"I ordered catering for a family event – everything was fresh, on time, and beautifully presented."</p>
+        <h4>– Ricardo L.</h4>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+        <p>"Belem Bakery brings back memories of my early years spent in Portugal. So real and cozy."</p>
+        <h4>– Ana P.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================
+       Scripts
+       ========================= -->
+  <!-- AOS JS for scroll animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script>
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: 'ease-in-out', // animation easing function
+      once: true, // animate only once
+    });
+  </script>
+
+  <!-- Main JavaScript -->
+  <script src="javascript/script.js"></script>
+</body>
+
+</html>

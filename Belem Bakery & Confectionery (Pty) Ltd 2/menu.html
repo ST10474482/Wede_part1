@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover Belem Bakery’s menu featuring freshly baked breads, cakes, pastries, and more. Perfect for every occasion or daily treats.">
+  <meta name="author" content="Neo Legodi" />
+  <meta name="keywords" content="Belem Bakery, menu, Portuguese pastries, cakes, baked goods, bakery menu">
+
+  <!-- Page Title -->
+  <title>Menu | Belem Bakery</title>
+
+  <!-- Canonical URL for SEO -->
+  <link rel="canonical" href="https://www.belembakery.com/menu/" />
+
+  <!-- Open Graph / Twitter Cards for Social Sharing -->
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Belem Bakery Menu – Fresh Breads, Pastries & Cakes">
+  <meta property="og:description" content="Explore Belem Bakery’s menu featuring freshly baked breads, cakes, Portuguese pastries, and more for every occasion.">
+  <meta property="og:image" content="https://www.belembakery.com/images/menu-featured.jpg">
+  <meta property="og:url" content="https://www.belembakery.com/menu/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Belem Bakery Menu – Fresh Breads, Pastries & Cakes">
+  <meta name="twitter:description" content="Explore Belem Bakery’s menu featuring freshly baked breads, cakes, Portuguese pastries, and more for every occasion.">
+  <meta name="twitter:image" content="https://www.belembakery.com/images/menu-featured.jpg">
+  <meta name="twitter:site" content="@BelemBakery">
+  <meta name="twitter:creator" content="@BelemBakery">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Belem Bakery",
+    "image": "https://www.belembakery.com/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "57 Augusta Rd, Regents Park Estate",
+      "addressLocality": "Johannesburg",
+      "postalCode": "2001",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.2041,
+      "longitude": 28.0473
+    },
+    "telephone": "011 435 1004",
+    "email": "info@belembakery.com",
+    "url": "https://www.belembakery.com",
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/BelemBakery",
+      "https://www.instagram.com/BelemBakery",
+      "https://twitter.com/BelemBakery"
+    ],
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Belem Bakery Menu",
+      "hasMenuSection": {
+        "@type": "MenuSection",
+        "name": "Pastries and Baked Goods",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Pastéis de Nata", "description": "Traditional Portuguese custard tarts with flaky pastry.", "offers": { "@type": "Offer", "price": "15", "priceCurrency": "ZAR" } },
+          { "@type": "MenuItem", "name": "Prawn Rissoles", "description": "Golden pastries filled with spicy prawn mix.", "offers": { "@type": "Offer", "price": "18", "priceCurrency": "ZAR" } }
+        ]
+      }
+    }
+  }
+  </script>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- =========================
+       Navigation / Header
+       ========================= -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <!-- Logo -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="cta">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Shopping Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount"></span>
+      </a>
+
+      <!-- Dark Mode Toggle Button -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Main Content / Menu Section
+       ========================= -->
+  <main>
+    <section class="product-highlights" aria-labelledby="menu-heading">
+      <h1 id="menu-heading">Our Bakery Menu</h1>
+
+      <!-- Search and Sort Controls -->
+      <div class="menu-controls">
+        <label for="searchInput" class="visually-hidden">Search pastries</label>
+        <input type="text" id="searchInput" placeholder="Search pastries..." />
+
+        <label for="sortSelect" class="visually-hidden">Sort menu items</label>
+        <select id="sortSelect">
+          <option value="default">Sort by</option>
+          <option value="name">Name (A–Z)</option>
+          <option value="price">Price (Low–High)</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Pastéis de Nata Card -->
+        <article class="product-card" data-name="Pastéis de Nata" data-price="15">
+          <a href="/menu/pasteis-de-nata/" aria-label="View details for Pastéis de Nata">
+            <img src="images/pasteis-de-nata-belem-bakery.jpg" alt="Pastéis de Nata" loading="lazy" />
+            <h2>Pastéis de Nata</h2>
+          </a>
+          <p>Traditional Portuguese custard tarts with a flaky pastry shell and creamy filling.</p>
+          <p class="price">R15 each</p>
+        </article>
+
+        <!-- Brown Coffee Card -->
+        <article class="product-card" data-name="Brown Coffee" data-price="38" role="region"
+          aria-labelledby="brown-coffee-title">
+          <a href="/menu/brown-coffee/" aria-label="View details for Brown Coffee">
+            <img src="images/brown-coffee-belem-bakery.jpeg" alt="Cup of freshly brewed Brown Coffee" loading="lazy" />
+            <h2 id="brown-coffee-title">Brown Coffee</h2>
+          </a>
+          <p>A hot, comforting cup of brown coffee, freshly brewed and ready to enjoy.</p>
+          <p class="price">R38</p>
+        </article>
+
+        <!-- Prawn Rissoles Card -->
+        <article class="product-card" data-name="Prawn Rissoles" data-price="18">
+          <a href="/menu/prawn-rissoles/" aria-label="View details for Prawn Rissoles">
+            <img src="images/prawn-rissoles-belem-bakery.jpg" alt="Prawn Rissoles" loading="lazy" />
+            <h2>Prawn Rissoles</h2>
+          </a>
+          <p>Crispy, golden pastries filled with spicy prawn mix perfect for snacks or parties.</p>
+          <p class="price">R18 each</p>
+        </article>
+
+        <!-- Latte Card -->
+        <article class="product-card" data-name="Latte" data-price="35" role="region" aria-labelledby="latte-title">
+          <a href="/menu/latte/" aria-label="View details for Latte">
+            <img src="images/latte-belem-bakery.jpeg" alt="Cup of freshly made Latte" loading="lazy" />
+            <h2 id="latte-title">Latte</h2>
+          </a>
+          <p>Enjoy a hot, creamy latte made with freshly brewed espresso and steamed milk.</p>
+          <p class="price">R35</p>
+        </article>
+
+        <!-- Portuguese Rolls Card -->
+        <article class="product-card" data-name="Portuguese Rolls" data-price="6">
+          <a href="/menu/portuguese-rolls/" aria-label="View details for Portuguese Rolls">
+            <img src="images/portuguese-rolls-belem-bakery.jpg" alt="Portuguese Rolls" loading="lazy" />
+            <h2>Portuguese Rolls</h2>
+          </a>
+          <p>Soft on the inside, crusty on the outside – perfect for sandwiches or breakfast.</p>
+          <p class="price">R6 each | R30 for 6</p>
+        </article>
+
+        <!-- Chicken Pie Card -->
+        <article class="product-card" data-name="Chicken Pie" data-price="25">
+          <a href="/menu/chicken-pie/" aria-label="View details for Chicken Pie">
+            <img src="images/chicken-pie-belem-bakery.jpg" alt="Chicken Pie" loading="lazy" />
+            <h2>Chicken Pie</h2>
+          </a>
+          <p>Hearty and flaky, packed with savory chicken filling and baked to perfection.</p>
+          <p class="price">R25 each</p>
+        </article>
+
+        <!-- Bolo de Bolacha Card -->
+        <article class="product-card" data-name="Bolo de Bolacha" data-price="40">
+          <a href="/menu/bolo-de-bolacha/" aria-label="View details for Bolo de Bolacha">
+            <img src="images/bolo-de-laranja-belem-bakery.jpg" alt="Bolo de Bolacha" loading="lazy" />
+            <h2>Bolo de Bolacha</h2>
+          </a>
+          <p>A beloved no-bake biscuit cake layered with buttercream and soaked in coffee.</p>
+          <p class="price">R40 per slice</p>
+        </article>
+
+        <!-- White Mocha Latte Card -->
+        <article class="product-card" data-name="White Mocha Latte" data-price="40" role="region"
+          aria-labelledby="white-mocha-latte-title">
+          <a href="/menu/white-mocha-latte/" aria-label="View details for White Mocha Latte">
+            <img src="images/white-mocha-latte-belem-bakery.jpeg" alt="Cup of White Mocha Latte" loading="lazy" />
+            <h2 id="white-mocha-latte-title">White Mocha Latte</h2>
+          </a>
+          <p>A rich, creamy white chocolate mocha latte, perfect for a cozy treat.</p>
+          <p class="price">R40</p>
+        </article>
+
+        <!-- Iced Mocha Card -->
+        <article class="product-card" data-name="Iced Mocha" data-price="42" role="region" aria-labelledby="iced-mocha-title">
+          <a href="/menu/iced-mocha/" aria-label="View details for Iced Mocha">
+            <img src="images/iced-mocha-belem-bakery.jpeg" alt="Glass of Iced Mocha" loading="lazy" />
+            <h2 id="iced-mocha-title">Iced Mocha</h2>
+          </a>
+          <p>A chilled mocha drink with ice and chocolatey espresso goodness, perfect for hot days.</p>
+          <p class="price">R42</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================
+       JS Libraries & Scripts
+       ========================= -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="javascript/script.js" defer></script>
+</body>
+
+</html>

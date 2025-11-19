@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive layout for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Contact Belem Bakery for inquiries, feedback, or general messages. Reach out to our team via email, phone, or our online contact form.">
+  <meta name="author" content="Neo Legodi" />
+  <meta name="keywords" content="bakery, Belem Bakery, pastries, bread, cakes, contact">
+
+  <title>Belem Bakery | Contact</title>
+
+  <!-- Structured Data (Schema.org for search engines) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Belem Bakery Contact Page",
+  "description": "Contact Belem Bakery for inquiries, feedback, or customer support.",
+  "url": "https://www.belembakery.com/contact.html",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "info@belembakery.com",
+    "telephone": "+27-11-435-1004",
+    "areaServed": "ZA",
+    "availableLanguage": ["English", "Portuguese"]
+  }
+}
+</script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================================ -->
+  <!-- Navigation Bar -->
+  <!-- ================================ -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+
+      <!-- Logo (consider making clickable) -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Mobile Navigation Toggle Button -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="cta">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Shopping Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount"></span>
+      </a>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- ================================ -->
+  <!-- Contact Page Content -->
+  <!-- ================================ -->
+  <main>
+    <section class="contact-section">
+
+      <!-- Page Title -->
+      <h1>Contact Belem Bakery</h1>
+      <p>Have a question, feedback, or need support? Fill out the form below, and we’ll get back to you as soon as
+        possible.</p>
+
+      <!-- ======================================== -->
+      <!-- Contact Form -->
+      <!-- ======================================== -->
+      <h2>Send Us a Message</h2>
+
+      <!-- 
+        NOTE:
+        - "method=POST" used to send form data securely.
+        - "action=/send-message" should be replaced with your backend URL or script.
+      -->
+      <form id="contact-form" method="POST" action="/send-message">
+
+        <!-- Full Name Input -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error" id="name-error"></span>
+
+        <!-- Email Address -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="email-error"></span>
+
+        <!-- Subject Field -->
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject">
+        <span class="error" id="subject-error"></span>
+
+        <!-- User Message -->
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <span class="error" id="message-error"></span>
+
+        <!-- Submit Button -->
+        <button type="submit">Send</button>
+
+        <!-- Dynamic Response Message (Success/Fail) -->
+        <div id="contact-response" class="form-response"></div>
+      </form>
+
+      <!-- ======================================== -->
+      <!-- Contact Information -->
+      <!-- ======================================== -->
+      <h2>Contact Information</h2>
+
+      <!-- Direct contact details for the bakery -->
+      <ul class="contact-info">
+        <p><strong>Phone:</strong> 011 435 1004</p>
+        <p><strong>Email:</strong> admin@belembakery.co.za</p>
+        <p><strong>Address:</strong> 57 Augusta Rd, Regents Park Estate, Johannesburg, 2197</p>
+      </ul>
+
+      <!-- ======================================== -->
+      <!-- Embedded Google Map -->
+      <!-- ======================================== -->
+      <h2>Our Location</h2>
+
+      <div class="map-container">
+        <!-- 
+          Google Maps iframe showing the exact bakery location.
+          "loading=lazy" improves performance on slower connections.
+        -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d689.8754744054173!2d28.068187221554524!3d-26.24116986046663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x1e950fabc8bfba9b%3A0x9609a46daa28b56e!3m2!1d-26.240981899999998!2d28.069021799999998!4m5!1s0x1e950fabc8bfba9b%3A0x9609a46daa28b56e!2s57%20Augusta%20Rd%2C%20Regents%20Park%20Estate%2C%20Johannesburg%2C%202197!3m2!1d-26.240981899999998!2d28.069021799999998!5e0!3m2!1sen!2sza!4v1761344403168!5m2!1sen!2sza"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================================ -->
+  <!-- Footer Section -->
+  <!-- ================================ -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Copyright -->
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+
+      <!-- Social Media Icons with Accessible Labels -->
+      <nav class="social-links" aria-label="Social Media Links">
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram" loading="lazy">
+        </a>
+
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter" loading="lazy">
+        </a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <!-- External JavaScript File -->
+  <script src="javascript/script.js"></script>
+
+</body>
+
+</html>

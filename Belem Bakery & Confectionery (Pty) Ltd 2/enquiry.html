@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive meta tag for mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO metadata -->
+  <meta name="description"
+    content="Submit an enquiry to Belem Bakery for custom orders, event services, or volunteering opportunities. Get personalized information and pricing.">
+  <meta name="author" content="Neo Legodi">
+  <meta name="keywords" content="services, volunteering, sponsorship, products, Belem Bakery">
+
+  <title>Belem Bakery | Enquiry</title>
+
+  <!-- Structured Data (for SEO and Google Knowledge Panels) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Belem Bakery Enquiry Page",
+  "description": "Submit enquiries about products, services, or volunteering at Belem Bakery.",
+  "url": "https://www.belembakery.com/enquiry.html",
+  "mainEntity": {
+    "@type": "ContactPoint",
+    "telephone": "+27-11-435-1004",
+    "contactType": "Customer Support",
+    "areaServed": "ZA",
+    "availableLanguage": ["English", "Portuguese"]
+  }
+}
+</script>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =============================== -->
+  <!-- Navigation Bar / Header Section -->
+  <!-- =============================== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+
+      <!-- Website Logo -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="cta">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Shopping Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount"></span>
+      </a>
+
+      <!-- Dark Mode Toggle Button -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- ================================= -->
+  <!-- Enquiry Form Section (Main Content) -->
+  <!-- ================================= -->
+  <main>
+    <section class="enquiry-section">
+
+      <!-- Page Title -->
+      <h1>Submit an Enquiry</h1>
+
+      <!-- Short introduction -->
+      <h2>About This Form</h2>
+      <p>Fill out the form below to enquire about our products, services, volunteering, or sponsorship opportunities.</p>
+
+      <!-- ========================= -->
+      <!-- Enquiry Input Form -->
+      <!-- ========================= -->
+      <h2>Enquiry Details</h2>
+
+      <!-- 
+        NOTE:
+        - This form does not have an "action" attribute, so it's expected
+          that JavaScript will handle submission.
+      -->
+      <form id="enquiry-form">
+
+        <!-- Full Name Field -->
+        <div class="form-group">
+          <label for="name">
+            <h3>Full Name</h3>
+          </label>
+          <input type="text" id="name" name="name" required>
+          <div id="name-error" class="error-message"></div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">
+            <h3>Email</h3>
+          </label>
+          <input type="email" id="email" name="email" required>
+          <div id="email-error" class="error-message"></div>
+        </div>
+
+        <!-- Enquiry Type Dropdown -->
+        <div class="form-group">
+          <label for="enquiryType">
+            <h3>Enquiry Type</h3>
+          </label>
+          <select id="enquiryType" name="enquiryType">
+            <option value="product">Product</option>
+            <option value="service">Service</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="sponsor">Sponsor</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Details / Message Section -->
+        <div class="form-group">
+          <label for="details">
+            <h3>Details / Questions</h3>
+          </label>
+          <textarea id="details" name="details" rows="5" required></textarea>
+          <div id="details-error" class="error-message"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Enquiry</button>
+
+        <!-- Response Message (shown after submission) -->
+        <p id="enquiry-response" class="form-response"></p>
+      </form>
+
+
+    </section>
+  </main>
+
+  <!-- =============================== -->
+  <!-- Footer Section -->
+  <!-- =============================== -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Copyright -->
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram" loading="lazy">
+        </a>
+
+        <!-- Twitter / X -->
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File (loaded with "defer" so it doesn't block rendering) -->
+  <script src="javascript/script.js" defer></script>
+
+</body>
+
+</html>

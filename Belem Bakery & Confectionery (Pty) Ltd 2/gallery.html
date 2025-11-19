@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character Encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive Viewport for Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO Meta Description -->
+  <meta name="description"
+    content="Browse Belem Bakery's gallery showcasing our fresh Portuguese pastries, cakes, and savory delights. See our baked creations up close." />
+
+  <!-- Author Info -->
+  <meta name="author" content="Neo Legodi" />
+
+  <!-- SEO Keywords -->
+  <meta name="keywords"
+    content="Belem Bakery gallery, Portuguese pastries, Bolo de Laranja, chicken pie, rissoles, baked goods photos" />
+
+  <title>Gallery | Belem Bakery</title>
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Belem Bakery Product Gallery",
+  "description": "Gallery of Belem Bakery’s pastries, cakes, and savory items.",
+  "url": "https://www.belembakery.com/gallery.html",
+  "creator": {
+    "@type": "Organization",
+    "name": "Belem Bakery"
+  },
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Neo Legodi"
+  },
+  "image": [
+    "https://www.belembakery.com/images/pasteis-de-nata-belem-bakery.jpg",
+    "https://www.belembakery.com/images/bolo-de-laranja-belem-bakery.jpg",
+    "https://www.belembakery.com/images/prawn-rissoles-belem-bakery.jpg",
+    "https://www.belembakery.com/images/portuguese-rolls-belem-bakery.jpg",
+    "https://www.belembakery.com/images/chicken-pie-belem-bakery.jpg",
+    "https://www.belembakery.com/images/bolo-de-bolacha-belem-bakery.jpg"
+  ]
+}
+</script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- GLightbox CSS (for image lightbox) -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+
+  <!-- AOS CSS (Scroll animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- =================================================== -->
+  <!-- Navigation Bar (Consistent Across All Site Pages) -->
+  <!-- =================================================== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+
+      <!-- Logo -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Hamburger Button for Mobile Menu -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="cta">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount"></span>
+      </a>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- ============================= -->
+  <!-- Main Content – Bakery Gallery -->
+  <!-- ============================= -->
+  <main>
+
+    <!-- ================================= -->
+    <!-- Featured Pastry & Bakery Gallery -->
+    <!-- ================================= -->
+    <section class="gallery-section" data-aos="fade-up">
+      <h1>Belem Bakery Gallery</h1>
+      <p>Take a look at some of our most loved Portuguese pastries and baked creations. Click on an image to view it larger.</p>
+
+      <!-- Image Grid Wrapper -->
+      <div class="gallery-grid">
+
+        <!-- ============================= -->
+        <!-- Gallery Item: Pastéis de Nata -->
+        <!-- ============================= -->
+        <figure id="pasteis" data-aos="zoom-in" role="img" aria-label="Pastéis de Nata">
+          <a href="images/pasteis-de-nata-belem-bakery.jpg" class="glightbox" data-gallery="gallery">
+            <picture>
+              <!-- Mobile-friendly image -->
+              <source srcset="images/pasteis-de-nata-belem-bakery-small.jpg" media="(max-width: 768px)">
+              <img src="images/pasteis-de-nata-belem-bakery.jpg" alt="Freshly baked Pastéis de Nata custard tarts" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>
+            Pastéis de Nata <a href="menu.html#pasteis">View on Menu</a>
+          </figcaption>
+        </figure>
+
+        <!-- ====================== -->
+        <!-- Gallery Item: Bolo de Laranja -->
+        <!-- ====================== -->
+        <figure id="bolo" data-aos="zoom-in" data-aos-delay="100" role="img" aria-label="Bolo de Laranja">
+          <a href="images/bolo-de-laranja-belem-bakery.jpg" class="glightbox" data-gallery="gallery">
+            <picture>
+              <source srcset="images/bolo-de-laranja-belem-bakery-small.jpg" media="(max-width: 768px)">
+              <img src="images/bolo-de-laranja-belem-bakery.jpg" alt="Bolo de Laranja - Portuguese orange cake" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Bolo de Laranja <a href="menu.html#bolo">View on Menu</a></figcaption>
+        </figure>
+
+        <!-- =================== -->
+        <!-- Gallery Item: Rissoles -->
+        <!-- =================== -->
+        <figure id="rissoles" data-aos="zoom-in" data-aos-delay="200" role="img" aria-label="Prawn Rissoles">
+          <a href="images/prawn-rissoles-belem-bakery.jpg" class="glightbox" data-gallery="gallery">
+            <picture>
+              <source srcset="images/prawn-rissoles-belem-bakery-small.jpg" media="(max-width: 768px)">
+              <img src="images/prawn-rissoles-belem-bakery.jpg" alt="Golden fried prawn rissoles" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Prawn Rissoles <a href="menu.html#rissoles">View on Menu</a></figcaption>
+        </figure>
+
+        <!-- ========================= -->
+        <!-- Gallery Item: Portuguese Rolls -->
+        <!-- ========================= -->
+        <figure id="rolls" data-aos="zoom-in" data-aos-delay="300" role="img" aria-label="Portuguese Rolls">
+          <a href="images/portuguese-rolls-belem-bakery.jpg" class="glightbox" data-gallery="gallery">
+            <picture>
+              <source srcset="images/portuguese-rolls-belem-bakery-small.jpg" media="(max-width: 768px)">
+              <img src="images/portuguese-rolls-belem-bakery.jpg" alt="Freshly baked Portuguese bread rolls" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Portuguese Rolls <a href="menu.html#rolls">View on Menu</a></figcaption>
+        </figure>
+
+        <!-- ======================= -->
+        <!-- Gallery Item: Chicken Pie -->
+        <!-- ======================= -->
+        <figure id="chicken-pie" data-aos="zoom-in" data-aos-delay="400" role="img" aria-label="Chicken Pie">
+          <a href="images/chicken-pie-belem-bakery.jpg" class="glightbox" data-gallery="gallery">
+            <picture>
+              <source srcset="images/chicken-pie-belem-bakery-small.jpg" media="(max-width: 768px)">
+              <img src="images/chicken-pie-belem-bakery.jpg" alt="Golden chicken pie with flaky crust" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Chicken Pie <a href="menu.html#chicken-pie">View on Menu</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =========================== -->
+    <!-- Coffee Drinks Gallery -->
+    <!-- =========================== -->
+    <section class="gallery-section" aria-label="Beverages" data-aos="fade-up">
+      <h2>Our Coffee Selection</h2>
+      <p>Enjoy a variety of freshly brewed coffee drinks crafted with passion and care.</p>
+
+      <div class="gallery-grid">
+
+        <!-- Coffee Item -->
+        <figure id="brown-coffee" data-aos="zoom-in" data-aos-delay="100">
+          <a href="images/brown-coffee-belem-bakery.jpeg" class="glightbox" data-gallery="coffee">
+            <picture>
+              <source srcset="images/brown-coffee-belem-bakery-small.jpg" media="(max-width: 768px)">
+              <img src="images/brown-coffee-belem-bakery.jpeg" alt="Cup of freshly brewed Brown Coffee" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Brown Coffee <a href="menu.html#brown-coffee">View on Menu</a></figcaption>
+        </figure>
+
+        <!-- Latte -->
+        <figure id="latte" data-aos="zoom-in" data-aos-delay="200">
+          <a href="images/latte-belem-bakery.jpeg" class="glightbox" data-gallery="coffee">
+            <picture>
+              <source srcset="images/latte-belem-bakery-small.jpeg" media="(max-width: 768px)">
+              <img src="images/latte-belem-bakery.jpeg" alt="Cup of freshly made Latte" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Latte <a href="menu.html#latte">View on Menu</a></figcaption>
+        </figure>
+
+        <!-- White Mocha Latte -->
+        <figure id="white-mocha-latte" data-aos="zoom-in" data-aos-delay="300">
+          <a href="images/white-mocha-latte-belem-bakery.jpeg" class="glightbox" data-gallery="coffee">
+            <picture>
+              <source srcset="images/white-mocha-latte-belem-bakery-small.jpeg" media="(max-width: 768px)">
+              <img src="images/white-mocha-latte-belem-bakery.jpeg" alt="Cup of White Mocha Latte" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>White Mocha Latte <a href="menu.html#white-mocha-latte">View on Menu</a></figcaption>
+        </figure>
+
+        <!-- Iced Mocha -->
+        <figure id="iced-mocha" data-aos="zoom-in" data-aos-delay="400">
+          <a href="images/iced-mocha-belem-bakery.jpeg" class="glightbox" data-gallery="coffee">
+            <picture>
+              <source srcset="images/iced-mocha-belem-bakery-small.jpeg" media="(max-width: 768px)">
+              <img src="images/iced-mocha-belem-bakery.jpeg" alt="Glass of Iced Mocha" loading="lazy">
+            </picture>
+          </a>
+          <figcaption>Iced Mocha <a href="menu.html#iced-mocha">View on Menu</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================ -->
+    <!-- Call-To-Action -->
+    <!-- ================ -->
+    <section class="gallery-cta" data-aos="fade-up" style="background-color:#f8f8f8; padding:20px; text-align:center;">
+      <h2>Love What You See?</h2>
+      <p>Order your favorite treats or visit our bakery to enjoy them fresh!</p>
+      <a href="order.html" class="cta"><strong>Order Now</strong></a>
+    </section>
+  </main>
+
+  <!-- ======================= -->
+  <!-- Footer Section -->
+  <!-- ======================= -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+
+      <!-- Social Media Icons -->
+      <div class="social-links">
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== -->
+  <!-- JavaScript Libraries -->
+  <!-- ======================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="javascript/script.js" defer></script>
+</body>
+
+</html>

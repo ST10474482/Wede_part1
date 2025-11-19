@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character Encoding -->
+  <meta charset="UTF-8" />
+  <!-- IE Compatibility -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Responsive Design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page Description for SEO -->
+  <meta name="description"
+    content="Place your online order at Belem Bakery. Choose from fresh breads, cakes, and pastries and have them ready for pickup or delivery.">
+  <meta name="author" content="Neo Legodi" />
+  <meta name="keywords" content="Belem Bakery, order online, Portuguese pastries, baked goods, Johannesburg bakery">
+
+  <!-- Page Title -->
+  <title>Order | Belem Bakery</title>
+
+  <!-- Structured Data for Order / Product -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "itemOffered": {
+    "@type": "Product",
+    "name": "Assorted Portuguese Pastries",
+    "description": "A selection of freshly baked pastries from Belem Bakery."
+  },
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.belembakery.com/order/",
+      "inLanguage": "en"
+    },
+    "deliveryMethod": [
+      "https://schema.org/OnSitePickup",
+      "https://schema.org/DeliveryModeOwnFleet"
+    ]
+  }
+}
+</script>
+
+  <!-- Canonical URL for SEO -->
+  <link rel="canonical" href="https://www.belembakery.com/order/" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       Navigation / Header
+       ========================= -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <!-- Logo -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Highlight current page -->
+        <li><a href="order.html" class="active cta" aria-current="page">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Shopping Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount">0</span>
+      </a>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Main Content
+       ========================= -->
+  <main>
+    <div class="order-box">
+      <h1>Place Your Order</h1>
+
+      <!-- =========================
+           Step 1: Customer Information
+           ========================= -->
+      <section id="customerForm">
+        <h2>Customer Details</h2>
+
+        <!-- Customer Info Form -->
+        <form id="detailsForm">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required />
+
+          <button type="submit">Continue to Cart</button>
+        </form>
+      </section>
+
+      <!-- =========================
+           Step 2: Order Items
+           ========================= -->
+      <section id="cartSection" style="display:none;">
+        <h2>Menu</h2>
+
+        <!-- Dynamic Menu will be loaded here via JavaScript -->
+        <div id="orderMenu" class="order-grid"></div>
+
+        <!-- Cart Summary -->
+        <h3>Your Cart</h3>
+        <ul id="cartItems"></ul>
+
+        <p id="totalPrice">Total: R0</p>
+
+        <button id="submitOrder">Submit Order</button>
+      </section>
+    </div>
+  </main>
+
+  <!-- =========================
+       Cart Modal (Popup)
+       ========================= -->
+  <div id="cartModal" class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartModalTitle">
+    <div class="cart-modal-content">
+      <!-- Close Button -->
+      <button class="cart-close" aria-label="Close cart">&times;</button>
+
+      <h3 id="cartModalTitle">Your Cart</h3>
+
+      <!-- Cart Items -->
+      <ul id="cartItemsModal"></ul>
+
+      <!-- Total Price in Modal -->
+      <p id="cartTotalModal"></p>
+
+      <!-- Checkout Button -->
+      <button id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- =========================
+       Order Confirmation Modal
+       ========================= -->
+  <div id="orderModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="modal-content">
+      <!-- Close Button -->
+      <button class="close-btn" aria-label="Close order confirmation">&times;</button>
+
+      <h3 id="orderModalTitle">Order Confirmation</h3>
+      <p id="order-confirmation"></p>
+    </div>
+  </div>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================
+       JavaScript
+       ========================= -->
+  <script src="javascript/script.js" defer></script>
+
+</body>
+
+</html>

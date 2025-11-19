@@ -1,0 +1,17 @@
+# Belem Bakery Robots.txt
+# Allow all search engines to crawl and index main site content.
+
+User-agent: *
+Disallow: /private/
+Disallow: /cgi-bin/
+# Disallow: /javascript/
+# Disallow: /css/
+
+# Allow image crawling for SEO
+Allow: /images/
+
+# Optional: Crawl delay for non-Google bots
+# Crawl-delay: 10
+
+# Sitemap(s)
+Sitemap: https://www.belembakery.com/sitemap.xml

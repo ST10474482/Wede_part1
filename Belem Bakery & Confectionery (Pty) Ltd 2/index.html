@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Author + SEO -->
+  <meta name="author" content="Neo Legodi">
+  <meta name="description" content="Belem Bakery offers freshly baked artisan bread, pastries, and cakes in Johannesburg. Visit us or order online for handcrafted delights.">
+  <meta name="keywords" content="Bakery, Artisan Bread, Pastries, Cakes, Fresh Bread, Handmade Pastries, Custom Cakes, Best Bakery Johannesburg">
+
+  <title>Home | Belem Bakery</title>
+
+  <!-- Social Media: Facebook / Open Graph -->
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Belem Bakery – Fresh Artisan Bread & Pastries">
+  <meta property="og:description" content="Belem Bakery offers freshly baked artisan bread, pastries, and cakes in Johannesburg. Visit us or order online!">
+  <meta property="og:image" content="https://www.belembakery.com/images/featured.jpg">
+  <meta property="og:url" content="https://www.belembakery.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Social Media: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Belem Bakery – Fresh Artisan Bread & Pastries">
+  <meta name="twitter:description" content="Belem Bakery offers freshly baked artisan bread, pastries, and cakes in Johannesburg. Visit us or order online!">
+  <meta name="twitter:image" content="https://www.belembakery.com/images/featured.jpg">
+  <meta name="twitter:site" content="@BelemBakery">
+  <meta name="twitter:creator" content="@BelemBakery">
+
+  <!-- Structured Data for SEO (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Belem Bakery",
+    "image": "https://www.belembakery.com/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "57 Augusta Rd, Regents Park Estate",
+      "addressLocality": "Johannesburg",
+      "postalCode": "2001",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.2041,
+      "longitude": 28.0473
+    },
+    "telephone": "+27-11-435-1004",
+    "email": "info@belembakery.com",
+    "url": "https://www.belembakery.com",
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/BelemBakery",
+      "https://www.instagram.com/BelemBakery",
+      "https://twitter.com/BelemBakery"
+    ]
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Main website styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> <!-- AOS animation library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" /> <!-- Lightbox gallery -->
+</head>
+
+<body>
+
+  <!-- ====================== NAVIGATION BAR =============================== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+
+      <!-- Website Logo -->
+      <div class="logo">Belem Bakery</div>
+
+      <!-- Mobile Hamburger Menu -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">&#9776;</button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="cta">Order Now</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+
+      <!-- Cart Icon -->
+      <a href="order.html" id="cartIcon" class="cart-icon" aria-label="Shopping cart">
+        🛒 <span id="cartCount"></span>
+      </a>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle" aria-pressed="false">🌙 Dark Mode</button>
+
+    </nav>
+  </header>
+
+  <!-- ====================== HERO SECTION =============================== -->
+  <main>
+    <section class="hero" data-aos="fade-up" aria-labelledby="hero-heading">
+
+      <!-- Dark overlay for better text visibility -->
+      <div class="hero-overlay"></div>
+
+      <!-- Hero Text Content -->
+      <div class="hero-content">
+        <h1 id="hero-heading">Welcome to Belem Bakery</h1>
+        <p class="tagline">Here in Johannesburg, you can find genuine Portuguese baked goods.</p>
+
+        <p>Portuguese warmth, flavor, and tradition are brought to your table every day with our freshly made,
+          handcrafted treats.</p>
+
+        <h2>Why Choose Us?</h2>
+
+        <!-- Highlighted Features -->
+        <ul class="hero-highlights">
+          <li>Freshly baked daily using traditional recipes</li>
+          <li>Wide selection of sweet and savory pastries</li>
+          <li>Catering & dine-in at our Regents Park Café</li>
+          <li>Serving Johannesburg since 1978</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER =============================== -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; ST10474482 Neo Legodi. All rights reserved.</p>
+
+      <!-- Social Media Icons -->
+      <div class="social-links">
+        <a href="https://www.facebook.com/BelemBakery" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+
+        <a href="https://www.instagram.com/BelemBakery" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://twitter.com/BelemBakery" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/x.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== JAVASCRIPT FILES =============================== -->
+
+  <!-- AOS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Lightbox for Images -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Main JavaScript (handles menu toggle, cart, dark mode, etc.) -->
+  <script src="javascript/script.js" defer></script>
+
+</body>
+
+</html>
